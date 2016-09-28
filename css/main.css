@@ -96,6 +96,7 @@ textarea {
    ========================================================================== */
 
 /*FONTS*/
+@import 'https://fonts.googleapis.com/css?family=Open+Sans';
 @font-face {
     font-family: 'moonbold';
     src: url('../font/moon_bold.woff2') format('woff2'),
@@ -104,14 +105,113 @@ textarea {
     font-style: normal;
 }
 
-p{font-family: "moonbold";}
+/*Styling for NAV*/
+nav{
+    position: relative;
+}    
+    .test{
+        display: block;
+        position: absolute;
+        right: 70px;
+        top: 30px;
+        width: auto;
+    }
 
+    #nav-icon {
+        float: right;
+        width: 50px;
+        height: 50px;
+        position: relative;
+        border: 3px solid #BDC6C7;
+        padding: 6px 10px;
+        box-sizing: border-box;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: .5s ease-in-out;
+        -moz-transition: .5s ease-in-out;
+        -o-transition: .5s ease-in-out;
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
 
+        #nav-icon span{
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 34px;
+            background: #BDC6C7;
+            opacity: 1;
+            left: 4.5px;
+            margin-top: 10px;
+            -webkit-transform: rotate(0deg);
+            -moz-transform: rotate(0deg);
+            -o-transform: rotate(0deg);
+            transform: rotate(0deg);
+            -webkit-transition: .25s ease-in-out;
+            -moz-transition: .25s ease-in-out;
+            -o-transition: .25s ease-in-out;
+            transition: .25s ease-in-out;
+        }
 
-
-
-
-
+            #nav-icon span:nth-child(1) {top: 0px;}
+            #nav-icon span:nth-child(2),#nav-icon span:nth-child(3) { top: 11px;}
+            #nav-icon span:nth-child(4) {top: 22px;}
+            #nav-icon.open span:nth-child(1) {
+                top: 12px;
+                width: 0%;
+                left: 50%;
+            }
+            #nav-icon.open span:nth-child(2) {
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            #nav-icon.open span:nth-child(3) {
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }
+            #nav-icon.open span:nth-child(4) {
+                top: 12px;
+                width: 0%;
+                left: 50%;
+            }
+    ul#menu-list{
+        padding-left: 0;
+        font-family: "moonbold";
+        position: relative;
+        width: 100%;
+        clear: both;
+        display: block;
+        top: 20px;
+        text-align: right;
+        opacity: 0;
+        transition: 0.3s;
+        border: 3px solid #BDC6C7;
+        box-sizing: border-box;
+        padding: 10px;
+        text-align: center;
+        pointer-events: none;
+    }
+    ul#menu-list.open{
+        opacity: 1;
+        transition: 0.3s;
+        top: 5px;
+        pointer-events: all;
+    }
+        ul li{
+            list-style: none;
+            padding-bottom: 10px;
+        }
+        ul li:last-child{
+            padding-bottom: 0px;
+        }
+            ul li a{color: #BDC6C7; text-decoration: none;}
+                ul li a:hover{border-bottom: 2px solid;}
 
 
 
